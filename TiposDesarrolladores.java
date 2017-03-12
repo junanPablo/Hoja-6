@@ -1,3 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication9;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -14,9 +21,9 @@ public class TiposDesarrolladores {
     private Set<String> Javas = null;
     private Set<String> webs = null;
     private Set<String> celu = null;
-    private Set<String> conjunto1 = null;
-    private Set<String> conjunto2 = null;
-    private Set<String> conjunto3 = null;
+    private Set<String> conjunto1 = null;//Desarrolladores con experiencia en Java, web y celulares
+    private Set<String> conjunto2 = null;//Desarrolladores con experiencia en Java pero que no tengan experiencia en web
+    private Set<String> conjunto3 = null;//Desarrolladores con experiencia en Web y Celulares pero no java
     private Set<String> conjunto4 = null;
     private Set<String> conjunto5 = null;
     private Set<String> conjunto6 = null;
@@ -83,9 +90,8 @@ public class TiposDesarrolladores {
         conjunto1.addAll(webs);
         System.out.print("La cantidad de desarrolladores que saben de las 3 son: "+conjunto1);
         
-        //conocen de java y desarrollo de apps pero no web
+        //conocen de java pero no web
         conjunto2.addAll(Javas);
-        conjunto2.addAll(celu);
         conjunto2.removeAll(webs);
         System.out.println("la cantidad de desarrolladores que no saben web: "+conjunto2);
         
@@ -107,7 +113,7 @@ public class TiposDesarrolladores {
         }else{
             contesta="no";
         }
-        
+         System.out.println("Es el conjunto de desarrollores Java suconjunto de los desarrolladores Web?" + contesta);
         if(celu.size()>Javas.size()&& celu.size()>webs.size()){
             TodosNombre = "los dearrolladores en apps sonson los mas grandes";
             conjunto6 = celu;
